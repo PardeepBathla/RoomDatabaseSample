@@ -14,7 +14,7 @@ import com.example.pavneet_singh.roomdemo.util.DateRoomConverter;
 /**
  * Created by Pavneet_Singh on 12/31/17.
  */
-
+//Add version and entities to database as
 @Database(entities = { Note.class }, version = 1)
 @TypeConverters({DateRoomConverter.class})
 public abstract class NoteDatabase extends RoomDatabase {
@@ -24,7 +24,7 @@ public abstract class NoteDatabase extends RoomDatabase {
 
     private static NoteDatabase noteDB;
 
-    // synchronized is use to avoid concurrent access in multithred environment
+    // synchronized is use to avoid concurrent access in multithread environment
     public static /*synchronized*/ NoteDatabase getInstance(Context context) {
         if (null == noteDB) {
             noteDB = buildDatabaseInstance(context);
